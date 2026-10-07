@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Técnico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="pagina-cadastro">
+        <section class="cartao formulario-area" aria-labelledby="tituloCadastro">
+            <header class="cabecalho-secao">
+                <span class="etiqueta">Cadastro</span>
+                <h1 id="tituloCadastro">Cadastro Técnico</h1>
+                <p>Preencha os dados abaixo para concluir seu cadastro.</p>
+            </header>
+
+            <form id="cadastroForm" novalidate>
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required aria-describedby="erroNome">
+                        <small class="erro" id="erroNome" aria-live="polite"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail institucional</label>
+                        <input type="email" id="email" name="email" placeholder="nome@instituicao.edu.br" autocomplete="email" required aria-describedby="erroEmail">
+                        <small class="erro" id="erroEmail" aria-live="polite"></small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Segurança</legend>
+
+                    <div class="linha-campos">
+                        <div class="campo">
+                            <label for="senha">Senha de acesso</label>
+                            <input type="password" id="senha" name="senha" placeholder="Mínimo 6 caracteres" minlength="6" autocomplete="new-password" required aria-describedby="erroSenha">
+                            <small class="erro" id="erroSenha" aria-live="polite"></small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="confirmaSenha">Confirmação de senha</label>
+                            <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Repita sua senha" minlength="6" autocomplete="new-password" required aria-describedby="erroConfirma">
+                            <small class="erro" id="erroConfirma" aria-live="polite"></small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Perfil técnico</legend>
+
+                    <div class="campo">
+                        <label for="perfil">Área de atuação</label>
+                        <select id="perfil" name="perfil" required aria-describedby="erroPerfil">
+                            <option value="">Selecione uma área</option>
+                            <option value="Redes">Redes</option>
+                            <option value="Desenvolvimento">Desenvolvimento</option>
+                            <option value="Suporte">Suporte</option>
+                        </select>
+                        <small class="erro" id="erroPerfil" aria-live="polite"></small>
+                    </div>
+                </fieldset>
+
+                <fieldset class="grupo-termos">
+                    <legend>Termos de uso</legend>
+
+                    <div class="termos">
+                        <input type="checkbox" id="termos" name="termos" required aria-describedby="erroTermos">
+                        <label for="termos">Li e aceito os termos de uso.</label>
+                    </div>
+
+                    <small class="erro erro-termos" id="erroTermos" aria-live="polite"></small>
+                </fieldset>
+
+                <button type="submit">Cadastrar</button>
+
+                <p id="mensagemSucesso" class="sucesso" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <aside class="cartao painel-area" aria-labelledby="tituloPainel">
+            <header class="cabecalho-secao cabecalho-painel">
+                <span class="etiqueta">Visualização</span>
+                <h2 id="tituloPainel">Dados cadastrados</h2>
+                <p>As informações válidas aparecerão aqui após o envio.</p>
+            </header>
+
+            <section class="perfil-card" aria-labelledby="saidaNome">
+                <div class="avatar" id="saidaAvatar" aria-hidden="true">?</div>
+
+                <div class="perfil-identificacao">
+                    <span class="rotulo">Nome</span>
+                    <strong id="saidaNome">Nenhum cadastro realizado</strong>
+                </div>
+            </section>
+
+            <dl class="dados">
+                <div class="dado">
+                    <dt>E-mail institucional</dt>
+                    <dd id="saidaEmail">—</dd>
+                </div>
+
+                <div class="dado">
+                    <dt>Perfil técnico</dt>
+                    <dd id="saidaPerfil">—</dd>
+                </div>
+
+                <div class="dado">
+                    <dt>Status</dt>
+                    <dd id="saidaStatus">Aguardando cadastro</dd>
+                </div>
+            </dl>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

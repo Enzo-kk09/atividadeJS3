@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    width: 400px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+.campo {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+.termos {
+    margin-bottom: 10px;
+}
+
+.termos input {
+    width: auto;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+.erro {
+    display: block;
+    color: red;
+}
+
+.sucesso {
+    color: green;
+}
+
+.painel-area {
+    margin-top: 30px;
+}
+
+.avatar {
+    display: none;
+}
+
+.dado {
+    margin-bottom: 10px;
+}
+
+.dado dd {
+    margin-left: 0;
+}
